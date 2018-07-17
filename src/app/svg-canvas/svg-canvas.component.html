@@ -1,0 +1,9 @@
+<svg viewBox="0 0 200 100" style="height:100vh;" xmlns="http://www.w3.org/2000/svg">
+  <circle *ngFor="let circle of circles" 
+    [attr.cx]="circle.cx"
+    [attr.cy]="circle.cy"
+    [attr.r]="circle.r"
+    [attr.fill]="circle.color"
+    [attr.fill-opacity]="circle.fillopacity"/>
+
+</svg>
