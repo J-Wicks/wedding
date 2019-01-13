@@ -1,0 +1,181 @@
+@import './variables';
+@import './mixins';
+
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Capriola');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+$color-0: #5dae4b;
+$color-1: #ffe25a;
+$color-2: #e16462;
+$color-3: #338abc;
+
+* {
+  font-family: 'Capriola', sans-serif;
+  color:#555;
+}
+body {
+  margin: 0px;
+}
+#circleRefresh {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #999;
+  opacity: .5;
+  cursor: pointer;
+}
+
+app-main-panel{
+  position:absolute;
+  top: 5vh;
+  left: 50px;
+  height: 90vh;
+  width: calc(100vw - 100px);
+  background-color:#fff;
+}
+ul{
+  list-style-type: none;
+}
+.container > li{
+  flex: 1;
+  cursor: pointer;
+}
+.show{
+  opacity: .98 !important;
+  }
+.step{
+box-shadow: 0px 0px 3px #9C27B0;
+border: 1px solid #9C27B0;
+opacity: 0;
+transition: 2s ease-in-out all;
+border-radius: 7px;
+}
+img{
+  box-shadow: 0px 0px 3px #9C27B0;
+}
+.container{
+  display: flex;
+
+}
+
+#rsvpForm {
+  height: 95%;
+  margin-top: 5%;
+}
+
+#rsvpForm label {
+  text-align: center;
+  flex: 1;
+  display: block;
+
+}
+
+#rsvpForm>div{
+  display:flex;
+}
+
+#rsvpForm>.form-group{
+  display:flex;
+  height: 12%;
+}
+#banner {
+  position: absolute;
+  top: 15%;
+  font-family:'Permanent Marker', cursive;
+  /* z-index: 1000; */
+  left: 33%;
+}
+#banner h1 {
+  font-family:'Permanent Marker', cursive;
+  font-size:72px
+}
+#banner h2 {
+  font-family:'Permanent Marker', cursive;
+  font-size:32px
+}
+#rsvpForm input{
+  display: flex;
+  flex: 1;
+  height: 25px;
+  border-radius: 5px;
+}
+
+#content>.container{
+  height: 100%;
+}
+%linkfill{
+  font: 300 24px/1.5 'Capriola', sans-serif;
+  margin-left: 80px;
+  color: #555;
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+  
+.container>li>a.option0{
+  @extend %linkfill;
+
+    background-image: linear-gradient(
+        to right,
+        $color-0,
+        $color-0 50%,
+        #555 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+}
+.container>li>a.option1{
+  @extend %linkfill;
+
+    background-image: linear-gradient(
+        to right,
+        $color-1,
+        $color-1 50%,
+        #555 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+}
+.container>li>a.option2{
+  @extend %linkfill;
+
+    background-image: linear-gradient(
+        to right,
+        $color-2,
+        $color-2 50%,
+        #555 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+}
+.container>li>a.option3{
+  @extend %linkfill;
+
+    background-image: linear-gradient(
+        to right,
+        $color-3,
+        $color-3 50%,
+        #555 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+}
+.container>li>a:hover {
+transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
+background-position: 0%;
+}
+.container>li>a.selected.option0{
+  color: gold !important;
+  background-image: linear-gradient(to right, $color-0, $color-0 50%);
+}
+.container>li>a.selected.option1{
+  color: gold !important;
+  background-image: linear-gradient(to right, $color-1, $color-1 50%);
+}
+.container>li>a.selected.option2{
+  color: gold !important;
+  background-image: linear-gradient(to right, $color-2, $color-2 50%);
+}
+.container>li>a.selected.option3{
+  color: gold !important;
+  background-image: linear-gradient(to right, $color-3, $color-3 50%);
+} 
+#content{
+  height: calc(100% - 68px);
+}

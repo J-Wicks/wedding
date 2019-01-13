@@ -1,0 +1,33 @@
+<div style="flex: 1">
+    <form id="rsvpForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="first">First Name</label>
+          <input type="text" [(ngModel)]="model.first" class="form-control" name="first" required>
+        </div>
+        <div class="form-group">
+          <label for="last">Last Name</label>
+          <input type="text" [(ngModel)]="model.last"  class="form-control" name="last" required>
+        </div>
+        <div class="form-group">
+            <label for="attending">Attending</label>
+            <input type="checkbox"[(ngModel)]="model.attending"  class="form-control" name="attending">
+          </div>
+        <div class="form-group" *ngIf="model.attending">
+          <label for="guests"># of Guests (Including Yourself)</label>
+          <input type="number" [(ngModel)]="model.guests" class="form-control" name="guests">
+        </div>
+        <div class="form-group" *ngIf="model.attending">
+          <label for="dietaryRestrictions">Dietary Restrictions?</label>
+          <input type="checkbox" [(ngModel)]="model.dietaryRestrictions" class="form-control" name="dietaryRestrictions">
+        </div>
+        <div *ngIf="model.dietaryRestrictions" class="form-group">
+            <label for="dietaryRestrictionsDetails">Please Describe</label>
+            <input type="text" [(ngModel)]="model.dietaryRestrictionsDetails" class="form-control" name="dietaryRestrictionsDetails">
+          </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+   
+      </form>
+</div>
+<div style="flex:1; padding:15px;">
+  <img style="max-width:100%;max-height:100%;float:right;" src="assets/IMG_0294.jpg"/>
+</div>

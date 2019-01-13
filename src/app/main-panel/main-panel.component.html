@@ -1,0 +1,14 @@
+<ul class="navigation container">
+  <li *ngFor="let title of links; let i = index" (click)="displayPanel(title, i)">
+      <a ngClass="option{{selectedIndex}}" [class.selected]="title === activeTitle">{{title}}</a>
+  </li>
+</ul>
+<div id="content" >
+  <div *ngIf="activeTitle === 'About Us'" class="container">
+      <div style="flex: 1"></div>
+      <div style="flex:1; padding:15px;">
+        <img style="max-width:100%;max-height:100%;float:right;" src="assets/IMG_0347.jpg"/>
+      </div>
+  </div>
+  <app-rsvp-form *ngIf="activeTitle === 'RSVP'" class="container"></app-rsvp-form>
+</div>

@@ -1,9 +1,22 @@
-<svg viewBox="0 0 200 100" style="height:100vh;" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 200 100" style="height:100vh;width:100vw" xmlns="http://www.w3.org/2000/svg">
   <circle *ngFor="let circle of circles" 
     [attr.cx]="circle.cx"
     [attr.cy]="circle.cy"
     [attr.r]="circle.r"
     [attr.fill]="circle.color"
     [attr.fill-opacity]="circle.fillopacity"/>
-
 </svg>
+<div id="circleRefresh" class="btn-group btn-group-toggle">
+  <i class="fa fa-refresh" (click)="remakeCircles()"></i>
+  <!-- <i class="fa fa-play" (click)="ngOnInit()"></i> -->
+</div>
+<div id="banner">
+  <h1>
+      Cooper Miller <br />& <br />Jeremy Wicks
+  </h1>
+  <h4>
+    7/6/2019
+  </h4>
+</div>
+<app-main-panel class="step"[class.show]="circlesComplete">
+</app-main-panel>

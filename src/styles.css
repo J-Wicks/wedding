@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+/*You can add global styles to this file, and also import other style files
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand');
+
+* {
+  font-family: 'Patrick Hand', cursive;
+  color:#555;
+}
+body {
+  margin: 0px;
+}
+#circleRefresh {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #999;
+  opacity: .5;
+  cursor: pointer;
+}
+
+app-main-panel{
+  position:absolute;
+  top: 5vh;
+  left: 100px;
+  height: 90vh;
+  width: calc(100vw - 200px);
+  background-color:#fff;
+}
+ul{
+  list-style-type: none;
+}
+.container > li{
+  flex: 1;
+  cursor: pointer;
+}
+.show{
+  opacity: .98 !important;
+  }
+.step{
+opacity: 0;
+transition: 2s ease-in-out all;
+}
+
+.container{
+  display: flex;
+}
+
+.container>li>a{
+    font: 300 24px/1.5 'Patrick Hand', cursive;
+    margin-left: 80px;
+    color: #555;
+    text-decoration: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+        to right,
+        gold,
+        gold 50%,
+        #555 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+  }
+  
+.container>li>a {
+transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
+background-position: 0%;
+}
+*/

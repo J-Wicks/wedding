@@ -4,17 +4,19 @@ import {Circle} from '../circle';
 
 
 @Component({
-  selector: 'app-svg-canvas',
+  selector: 'app-canvas',
   templateUrl: './svg-canvas.component.html',
   styleUrls: ['./svg-canvas.component.css']
 })
 export class SvgCanvasComponent implements OnInit {
   circles: Circle[] = [];
   colors;
+  circlesComplete;
 
   constructor() { 
     this.circles = [];
     this.colors = ['#ffe25a', '#ee9785', '#e16462', '#a3ca64', '#5dae4b', '#3b8755', '#338abc', '#20586c'];
+    this.circlesComplete = false;
   }
   
   generateCircleCoords() {
@@ -36,13 +38,22 @@ export class SvgCanvasComponent implements OnInit {
       color: this.generateRandomColor(),
     })
   }
+
+  remakeCircles(){
+    this.circles = [];
+    this.ngOnInit();
+  }
+
   ngOnInit() {
     const clear = setInterval(()=>{
       this.createRandomCircle();
-    }, 100)
+    }, 250)
+    setTimeout(()=>{
+      this.circlesComplete = true;
+    }, 2500)
     setTimeout(()=>{
       clearInterval(clear);
-    }, 5000)
+    }, 6500)
   }
 
 }
